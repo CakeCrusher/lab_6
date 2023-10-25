@@ -1,3 +1,9 @@
+"""
+Sebastian repo: https://github.com/dev-par/lab6
+Devan repo: https://github.com/CakeCrusher/lab_6
+Name: Sebastian Sosa
+"""
+
 def encode(password: str):
     # increase the value of each digit in the password by 3
     newPass = ''
