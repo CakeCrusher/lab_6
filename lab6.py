@@ -11,6 +11,13 @@ def encode(password: str):
         newPass += str(int(password[i]) + 3)
     return newPass
 
+
+def decode(encoded_password):
+    origPass = " "
+    for i in range(len(encoded_password)):
+        origPass += str((int(encoded_password[i]) - 3))
+    return origPass
+
 def main():
     encoded_password = ''
     while True:
@@ -26,8 +33,9 @@ Please enter an option:""")
             encoded_password = encode(password)
             print("Your password has been encoded and stored!\n")
         elif inp == "2":
-            # CONTRIBUTOR PLEASE ADD DECODER HERE
-            pass
+            decoded_password = decode(encoded_password)
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}")
+
         elif inp == "3":
             break
 
